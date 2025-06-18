@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import DustBackground from '../components/DustBackground';
 import './About.css';
-import Logo1 from '../assets/Logo1.png'
+
 
 const skills = [
   {
@@ -30,7 +30,7 @@ const skills = [
 
 const educations = [
   {
-    logo: Logo1,
+    logo: 'https://drive.google.com/file/d/1rAIUyv79HHq5bYeHoAVNfv3bA7vLncuu/view?usp=drive_link',
     name: 'Southern Philippines Baptist Theological Seminary',
     level: 'High School Level',
     desc: "SFBTS is dedicated to teaching God's Word, equipping God's servants, and sending God's workers. My alma mater, a private educational institution located in Puerto Princesa City, was established through the inspiration and vision of a dedicated missionary who recognized the spiritual needs of the city's children of God.",
