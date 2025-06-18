@@ -30,7 +30,7 @@ const skills = [
 
 const educations = [
   {
-    logo: 'https://drive.google.com/file/d/1rAIUyv79HHq5bYeHoAVNfv3bA7vLncuu/view?usp=drive_link',
+    logo: 'https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/508828613_2169721100131558_2860552920310533796_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF3NKoW5FqapcTKDRM87cTS5BnLy_o_4_rkGcvL-j_j-gFg--Kj-bseAPLl6jLlStE2WXdyl01hB1GK6mzX9-6S&_nc_ohc=IrgCe-enfDsQ7kNvwHVyzBU&_nc_oc=Adnc-ckNm7Z0rTQkG1f4ayHFeYTbh6O8f6RMSfqdZxAO1XlZcUMeEQFBnNQMumO-PGw&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=FsQfsRw9A4iuv3Cj6u5_Sg&oh=00_AfPjCtHoxHeBONWzgQ9sYLWBIFxo32bLBlJdBshZ7RwTdQ&oe=68589664',
     name: 'Southern Philippines Baptist Theological Seminary',
     level: 'High School Level',
     desc: "SFBTS is dedicated to teaching God's Word, equipping God's servants, and sending God's workers. My alma mater, a private educational institution located in Puerto Princesa City, was established through the inspiration and vision of a dedicated missionary who recognized the spiritual needs of the city's children of God.",
