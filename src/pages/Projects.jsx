@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./Projects.css";
+import project1 from '../assets/anh2.gif'
 
 const projectsData = [
   {
     title: "The Cities Within",
     type: "Game",
-    image: "https://gamelade.vn/wp-content/uploads/2024/12/spirited_away.webp",
+    image: project1,
     description: "An action role playing demo game. Embark on an epic journey and build your own city, utilizing electric power. Explore a vast world, recruit new agents, and build your own city. Each agent has their own unique abilities, and you might need to solve puzzles, defeat enemies, and gather resources.",
     visit: "#",
     source: "#"
@@ -63,21 +64,21 @@ const Projects = () => {
       </div>
       {/* Slide section */}
       <div className="project-slide">
-        <button className="slide-btn left" onClick={handlePrev}>&lt;</button>
-        <div className="slide-content">
-          <div className="slide-info">
-            <h2>{slideProject.title}</h2>
-            <p className="slide-type">{slideProject.type}</p>
-            <p className="slide-desc">{slideProject.description}</p>
-            <div className="slide-links">
-              <a href={slideProject.visit} target="_blank" rel="noopener noreferrer">Visit Page</a>
-              <a href={slideProject.source} target="_blank" rel="noopener noreferrer">Source</a>
-            </div>
-          </div>
+        <div className="slide-content-wrapper">
           <div className="slide-image">
             <img src={slideProject.image} alt={slideProject.title} />
           </div>
+          <div className="slide-info">
+            <h2 className="slide-title">{slideProject.title}</h2>
+            <p className="slide-type">{slideProject.type} Tracking Software</p>
+            <p className="slide-desc">{slideProject.description}</p>
+            <div className="slide-links">
+              <a href={slideProject.visit} target="_blank" rel="noopener noreferrer" className="slide-btn-main">Visit Page</a>
+              <a href={slideProject.source} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Github</a>
+            </div>
+          </div>
         </div>
+        <button className="slide-btn left" onClick={handlePrev}>&lt;</button>
         <button className="slide-btn right" onClick={handleNext}>&gt;</button>
       </div>
       {/* End slide section */}
