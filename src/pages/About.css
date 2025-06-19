@@ -19,15 +19,19 @@
   position: sticky;
   top: 0;
   height: 100vh;
+  text-align: left;
+  /* padding-top: 32px; */
+  padding-bottom: 32px;
+  padding-left: 0;
 }
 
 .about-sidebar h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 24px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0;
   letter-spacing: 2px;
-  padding: 0;
-  margin: 0;
+  text-align: left;
+  margin-top: 0;
 }
 
 .about-sidebar ul {
@@ -105,6 +109,10 @@
   margin-left: 0;
 }
 
+.about-intro-row1 {
+  margin-bottom: 30px !important;
+}
+
 .about-avatar-col {
   flex-shrink: 0;
   display: flex;
@@ -113,12 +121,11 @@
 }
 
 .about-avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 10px;
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
   object-fit: cover;
-  border: 2px solid #fff;
-  box-shadow: 0 2px 12px #0006;
+  display: block;
 }
 
 .about-info-col {
@@ -185,7 +192,7 @@
   font-size: 0.95rem;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 10px;
 }
 
 .about-interests-box {
@@ -196,27 +203,20 @@
 
 .about-interests-list {
   display: flex;
-  gap: 8px;
-  margin-top: 6px;
+  flex-wrap: wrap;
+  gap: 18px;
 }
 
 .interest-icon {
-  width: 28px;
-  height: 28px;
-  background: transparent;
-  border: 1.2px solid #bbb;
-  border-radius: 7px;
+  font-size: 2.2rem;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.05rem;
-  color: #fff;
-  box-shadow: 0 1px 6px #0003;
-  transition: background 0.2s, color 0.2s;
-}
-.interest-icon:hover {
-  background: #fff;
-  color: #111;
+  border: 1.5px solid #fff;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
 }
 
 .section-with-vertical-line {
@@ -346,6 +346,7 @@
   justify-content: center;
   min-width: 80px;
   height: 100%;
+  margin-right: 20px;
 }
 .edu-logo img {
   width: 120px;
@@ -358,20 +359,24 @@
   font-weight: bold;
   font-size: 1.05rem;
   margin-bottom: 4px;
+  text-align: left;
 }
 .edu-level {
   color: #aaa;
   font-size: 0.97rem;
   margin-bottom: 2px;
+  text-align: left;
 }
 .edu-desc {
   color: #ccc;
   font-size: 0.97rem;
   margin-bottom: 2px;
+  text-align: left;
 }
 .edu-year {
   color: #aaa;
   font-size: 0.95rem;
+  text-align: left;
 }
 
 .about-bg-number {
@@ -385,4 +390,99 @@
   pointer-events: none;
   user-select: none;
   z-index: 0;
+}
+
+.personal-detail-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.personal-detail-row .label {
+  min-width: 90px;
+  font-weight: bold;
+  color: #fff;
+  text-align: left;
+  display: inline-block;
+}
+
+.personal-detail-row .value {
+  color: #eee;
+  text-align: left;
+  margin-left: 8px;
+  word-break: break-all;
+  min-width: 220px;
+}
+
+@media (max-width: 900px) {
+  .about-avatar-col .about-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .interest-icon {
+    font-size: 1.4rem;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.about-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0 0;
+  position: relative;
+}
+
+.about-menu-list li {
+  position: relative;
+  margin-bottom: 18px;
+  padding-left: 32px;
+}
+
+/* .about-menu-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+.about-menu-list li:first-child::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #fff;
+  z-index: 0;
+} */
+
+.about-menu-list button {
+  background: none;
+  border: none;
+  color: #dad4d465;
+  font-size: 1.1rem;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  transition: color 0.2s;
+}
+
+.about-menu-list button.active,
+.about-menu-list button:hover {
+  color: #faf7f7;
+  font-weight: bold;
+}
+
+.about-menu-list button:focus {
+  outline: none;
+  box-shadow: none;
 } 

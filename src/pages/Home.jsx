@@ -1,4 +1,5 @@
 import './Home.css';
+import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <main className="main-content">
@@ -15,7 +16,9 @@ const Home = () => {
             <h1 data-aos="zoom-in-up">
               Frontend Development & PowerPoint Design <span>Professional</span>
             </h1>
-            <button data-aos="zoom-out"><span>Show my Work</span></button>
+            <Link to="/projects" style={{ textDecoration: 'none' }}>
+              <button data-aos="zoom-out"><span>Show my Work</span></button>
+            </Link>
           </div>
         </div>
       </section>

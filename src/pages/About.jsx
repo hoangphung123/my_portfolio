@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import DustBackground from '../components/DustBackground';
 import './About.css';
+import React, { useState, useRef } from 'react';
 
 
 const skills = [
@@ -30,21 +31,21 @@ const skills = [
 
 const educations = [
   {
-    logo: 'https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/508828613_2169721100131558_2860552920310533796_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF3NKoW5FqapcTKDRM87cTS5BnLy_o_4_rkGcvL-j_j-gFg--Kj-bseAPLl6jLlStE2WXdyl01hB1GK6mzX9-6S&_nc_ohc=IrgCe-enfDsQ7kNvwHVyzBU&_nc_oc=Adnc-ckNm7Z0rTQkG1f4ayHFeYTbh6O8f6RMSfqdZxAO1XlZcUMeEQFBnNQMumO-PGw&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=FsQfsRw9A4iuv3Cj6u5_Sg&oh=00_AfPjCtHoxHeBONWzgQ9sYLWBIFxo32bLBlJdBshZ7RwTdQ&oe=68589664',
+    logo: 'https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/482009044_631623413063121_7724380613014001949_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF0KK1wlWr1ndVg2NuyeVyLzIrAmpbBL7bMisCalsEvtmJ-8N6VEd_GgMKWLUvuFzJbDdlyThFXcz2lY3Qg7v8d&_nc_ohc=K-PsUNo67NMQ7kNvwHUx3mr&_nc_oc=AdnaCVtDsS8-Yuvd41Pp_PUHEPpTR2RMetkxGX8sTdCORqrcjZkZf2AmiJIm-PVTbyQ&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=74JoVwnSkF3vlnVSp-gszw&oh=00_AfMhLJOBi4q3TUjr7JuLmKEHOWKUGdTAsH2ey4bCTywVOA&oe=6859C3B8',
     name: 'Southern Philippines Baptist Theological Seminary',
     level: 'High School Level',
     desc: "SFBTS is dedicated to teaching God's Word, equipping God's servants, and sending God's workers. My alma mater, a private educational institution located in Puerto Princesa City, was established through the inspiration and vision of a dedicated missionary who recognized the spiritual needs of the city's children of God.",
     year: '2015 - 2021',
   },
   {
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/University_of_the_Immaculate_Conception_seal.png',
+    logo: 'https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/508828613_2169721100131558_2860552920310533796_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF3NKoW5FqapcTKDRM87cTS5BnLy_o_4_rkGcvL-j_j-gFg--Kj-bseAPLl6jLlStE2WXdyl01hB1GK6mzX9-6S&_nc_ohc=IrgCe-enfDsQ7kNvwHVyzBU&_nc_oc=Adnc-ckNm7Z0rTQkG1f4ayHFeYTbh6O8f6RMSfqdZxAO1XlZcUMeEQFBnNQMumO-PGw&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=FsQfsRw9A4iuv3Cj6u5_Sg&oh=00_AfPjCtHoxHeBONWzgQ9sYLWBIFxo32bLBlJdBshZ7RwTdQ&oe=68589664',
     name: 'University of the Immaculate Conception',
     level: 'Senior High School Level',
-    desc: 'UIC has accepted the challenge to teach in humanities, science, engineering, and technology. It is known for its academic excellence and values formation. My time here was spent learning the value of service and the value of a Dominican society in service towards the ever-changing city children of God.',
+    desc: 'I graduated from Ho Chi Minh City University of Technology and Education (HCMUTE) – one of the leading universities in Vietnam in the fields of engineering and technology. HCMUTE is known for its high-quality academic programs, accredited by international standards such as AUN-QA and ABET, and for its modern, practice-oriented learning environment. The university maintains strong partnerships with institutions worldwide, giving students early access to global knowledge and advanced technologies. It is also a place that fosters creativity, entrepreneurship, and solid professional skills among its students.',
     year: '2021 - 2023',
   },
   {
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/University_of_Southeastern_Philippines_logo.png',
+    logo: 'https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/508828613_2169721100131558_2860552920310533796_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF3NKoW5FqapcTKDRM87cTS5BnLy_o_4_rkGcvL-j_j-gFg--Kj-bseAPLl6jLlStE2WXdyl01hB1GK6mzX9-6S&_nc_ohc=IrgCe-enfDsQ7kNvwHVyzBU&_nc_oc=Adnc-ckNm7Z0rTQkG1f4ayHFeYTbh6O8f6RMSfqdZxAO1XlZcUMeEQFBnNQMumO-PGw&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=FsQfsRw9A4iuv3Cj6u5_Sg&oh=00_AfPjCtHoxHeBONWzgQ9sYLWBIFxo32bLBlJdBshZ7RwTdQ&oe=68589664',
     name: 'University of Southeastern Philippines',
     level: 'College Level',
     desc: 'USEP is a premier university in the region, offering quality education and research. Here, I am pursuing my Bachelor of Science in Computer Science, focusing on software engineering and UI/UX design.',
@@ -69,17 +70,47 @@ const interests = [
 ];
 
 const About = () => {
+  const [activeSection, setActiveSection] = useState('introduction');
+  const introRef = useRef(null);
+  const skillsRef = useRef(null);
+  const eduRef = useRef(null);
+
+  const handleScrollTo = (section) => {
+    setActiveSection(section);
+    let ref = introRef;
+    if (section === 'skills') ref = skillsRef;
+    if (section === 'education') ref = eduRef;
+  
+    const main = document.querySelector('.about-main.scrollable');
+    if (main && ref.current) {
+      const mainRect = main.getBoundingClientRect();
+      const sectionRect = ref.current.getBoundingClientRect();
+      const scrollOffset = sectionRect.top - mainRect.top - (main.clientHeight / 2) + (ref.current.clientHeight / 2);
+      main.scrollTo({
+        top: main.scrollTop + scrollOffset,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="app-container">
       <DustBackground />
       {/* <Navbar /> */}
       <div className="about-container">
         <aside className="about-sidebar">
-          <h2>ABOUT ME</h2>
-          <ul>
-            <li className="active">Introduction</li>
-            <li>Skills</li>
-            <li>Education</li>
+          <h2 style={{ textAlign: 'left', fontSize: '2.2rem', marginBottom: 0 }}>ABOUT ME</h2>
+          <div style={{ textAlign: 'left', fontSize: '1rem', color: '#aaa', marginBottom: '24px', marginTop: '2px' }}>My Profile At A Glance</div>
+          <ul className="about-menu-list">
+            <li>
+              <button className={activeSection === 'introduction' ? 'active' : ''} onClick={() => handleScrollTo('introduction')}>Introduction</button>
+            </li>
+            <li>
+              <button className={activeSection === 'skills' ? 'active' : ''} onClick={() => handleScrollTo('skills')}>Skills</button>
+            </li>
+            <li>
+              <button className={activeSection === 'education' ? 'active' : ''} onClick={() => handleScrollTo('education')}>Education</button>
+            </li>
           </ul>
           <div className="about-social-icons">
             {socialIcons.map((s, i) => (
@@ -90,49 +121,51 @@ const About = () => {
           </div>
         </aside>
         <section className="about-main scrollable">
-          <div className="section-with-vertical-line">
+          <div className="section-with-vertical-line" id="introduction" ref={introRef}>
             <div className="section-title-vertical">
               <span className="section-dot"></span>
               <span className="section-vertical-line"></span>
             </div>
             <div className="section-content">
               <div className="section-title-text">Introduction</div>
-              <div className="about-intro-row">
-                <div className="about-avatar-col">
-                  <img className="about-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar" />
-                </div>
-                <div className="about-info-col">
-                  <div className="about-intro-header">
-                    <div className="about-intro-name">JHANUZ MATIDIOS.</div>
-                    <div className="about-intro-role">Full-stack Developer, UI/UX Designer.</div>
-                    <p className="about-desc">
-                      An aspiring full stack developer passionate about creating innovative PRODUCTS, prioritizing security and efficiency. Passionate about front-end web development and UI/UX design, creating seamless digital experiences. CONTACT me to explore collaboration opportunities or learn more ABOUT ME.
-                    </p>
+              <div className="about-intro-row" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div className="about-intro-row1" style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '30', textAlign: 'left', width: '100%', gap: '32px' }}>
+                  <div className="about-avatar-col" style={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
+                    <img className="about-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar" />
                   </div>
-                  <div className="about-details-row">
-                    <div className="about-personal-details">
-                      <div className="about-details-title">Personal Details</div>
-                      <div><b>Age:</b> 20 years old</div>
-                      <div><b>Birthday:</b> Jan 1, 2004</div>
-                      <div><b>Email:</b> example@email.com</div>
-                      <div><b>Address:</b> Philippines, Lopez Street</div>
+                  <div className="about-info-col" style={{ flex: 2 }}>
+                    <div className="about-intro-header">
+                      <div className="about-intro-name">PHUNG HUY HOANG.</div>
+                      <div className="about-intro-role">Full-stack Developer, PowerPoint Design.</div>
+                      <p className="about-desc">
+                        I'm a Frontend Developer and PowerPoint Design Specialist, passionate about building modern, user-friendly web interfaces and creating impactful, professional slide decks. With a strong eye for design and solid technical skills, I help turn ideas into clear, attractive, and effective presentations..
+                      </p>
                     </div>
-                    <div className="about-interests-box">
-                      <div className="about-details-title">Interests</div>
-                      <div className="about-interests-list">
-                        {interests.map((it, i) => (
-                          <div className="interest-icon" key={i} title={it.label}>
-                            <i className={it.icon}></i>
-                          </div>
-                        ))}
-                      </div>
+                  </div>
+                </div>
+                <div className="about-intro-row2" style={{ display: 'flex', alignItems: 'flex-start', textAlign: 'left', width: '100%', gap: '32px' }}>
+                  <div className="about-personal-details" style={{ flex: 1 }}>
+                    <div className="about-details-title">Personal Details</div>
+                    <div className="personal-detail-row"><span className="label">Age:</span><span className="value">23 years old</span></div>
+                    <div className="personal-detail-row"><span className="label">Birthday:</span><span className="value">May 18, 2002</span></div>
+                    <div className="personal-detail-row"><span className="label">Email:</span><span className="value">phunghoanghuy8@email.com</span></div>
+                    <div className="personal-detail-row"><span className="label">Address:</span><span className="value">Ho Chi Minh</span></div>
+                  </div>
+                  <div className="about-interests-box" style={{ flex: 2 }}>
+                    <div className="about-details-title">Interests</div>
+                    <div className="about-interests-list">
+                      {interests.map((it, i) => (
+                        <div className="interest-icon" key={i} title={it.label}>
+                          <i className={it.icon}></i>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="section-with-vertical-line">
+          <div className="section-with-vertical-line" id="skills" ref={skillsRef}>
             <div className="section-title-vertical">
               <span className="section-dot"></span>
               <span className="section-vertical-line"></span>
@@ -155,7 +188,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="section-with-vertical-line">
+          <div className="section-with-vertical-line" id="education" ref={eduRef}>
             <div className="section-title-vertical">
               <span className="section-dot"></span>
               <span className="section-vertical-line"></span>
