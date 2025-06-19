@@ -309,4 +309,24 @@ main {
         max-width: 340px;
         height: 180px;
     }
+
+    .projects-page {
+        padding: 0 8px;
+    }
+    .projects-title-section {
+        margin: 24px 0 12px 0;
+        text-align: center;
+    }
+    .projects-filters {
+        margin-left: 0;
+        text-align: center;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .project-card {
+        width: 100%;
+        margin: 0 auto;
+    }
 }

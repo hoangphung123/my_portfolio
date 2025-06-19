@@ -415,9 +415,42 @@
 }
 
 @media (max-width: 900px) {
-  .about-avatar-col .about-avatar {
-    width: 80px;
-    height: 80px;
+  .about-container {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .about-sidebar {
+    width: 100%;
+    min-width: unset;
+    margin: 0 0 24px 0;
+    padding: 0 12px;
+    text-align: center;
+    display: none;
+  }
+  .about-main {
+    width: 100%;
+    padding: 0 8px;
+  }
+  .about-intro-row1,
+  .about-intro-row2 {
+    flex-direction: column !important;
+    gap: 12px;
+  }
+  .about-avatar-col {
+    justify-content: center !important;
+    margin: 0 auto 12px auto !important;
+  }
+  .about-avatar {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  .about-info-col, .about-personal-details, .about-interests-box {
+    flex: unset !important;
+    width: 100%;
+  }
+  .about-interests-list {
+    justify-content: center;
   }
   .interest-icon {
     font-size: 1.4rem;
