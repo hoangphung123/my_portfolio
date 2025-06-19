@@ -2,7 +2,11 @@ import './Home.css';
 const Home = () => {
   return (
     <main className="main-content">
-      <section class="hero">
+      <section className="hero">
+        <div className="corner-border top"></div>
+        <div className="corner-border left"></div>
+        <div className="corner-border bottom"></div>
+        <div className="corner-border right"></div>
         <div class="container">
           <div class="content">
             <svg viewBox="0 0 1500 500" data-aos="fade-down">
