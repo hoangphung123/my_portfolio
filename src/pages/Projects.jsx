@@ -4,12 +4,14 @@ import project1 from '../assets/anh2.gif'
 import project2 from '../assets/anh3.gif'
 import project3 from '../assets/anh4.gif'
 import project4 from '../assets/anh5.gif'
+import project5 from '../assets/anh1.gif'
+import HeroImageGridModal from '../components/HeroImageGridModal';
 
 const projectsData = [
   {
     title: "The Cities Within",
     type: "PowerPoint",
-    image: project1,
+    images: [project1, project2, project2, project4],
     description: "An action role playing demo game. Embark on an epic journey and build your own city, utilizing electric power. Explore a vast world, recruit new agents, and build your own city. Each agent has their own unique abilities, and you might need to solve puzzles, defeat enemies, and gather resources.",
     visit: "#",
     source: "#"
@@ -17,7 +19,7 @@ const projectsData = [
   {
     title: "NFT Collection",
     type: "PowerPoint",
-    image: project2,
+    images: [project2, project3, project1],
     description: "A platform to showcase and trade NFT collections.",
     visit: "#",
     source: "#"
@@ -25,7 +27,7 @@ const projectsData = [
   {
     title: "Mobile App UI",
     type: "PowerPoint",
-    image: project3,
+    images: [project3, project4, project2],
     description: "A modern mobile app interface design.",
     visit: "#",
     source: "#"
@@ -33,7 +35,7 @@ const projectsData = [
   {
     title: "Login System",
     type: "website",
-    image: project4,
+    images: [project4, project1, project5],
     description: "A secure login and authentication system.",
     visit: "#",
     source: "#"
@@ -45,6 +47,7 @@ const filters = ["All", "PowerPoint", "website", "Game"];
 const Projects = () => {
   const [selected, setSelected] = useState("All");
   const [slideIdx, setSlideIdx] = useState(0);
+  const [popupProject, setPopupProject] = useState(null);
   const filteredProjects =
     selected === "All"
       ? projectsData
@@ -58,6 +61,10 @@ const Projects = () => {
     setSlideIdx((prev) => (prev === projectsData.length - 1 ? 0 : prev + 1));
   };
   const slideProject = projectsData[slideIdx];
+
+  // Popup handlers
+  const openPopup = (project) => setPopupProject(project);
+  const closePopup = () => setPopupProject(null);
 
   return (
     <div className="projects-page">
@@ -75,7 +82,7 @@ const Projects = () => {
         <div className="project-slide" style={{marginTop: '48px'}}>
           <div className="slide-content-wrapper">
             <div className="slide-image">
-              <img src={slideProject.image} alt={slideProject.title} />
+              <img src={slideProject.images[0]} alt={slideProject.title} />
             </div>
             <div className="slide-info">
               <h2 className="slide-title">{slideProject.title}</h2>
@@ -103,8 +110,8 @@ const Projects = () => {
       </div>
       <div className="projects-grid">
         {filteredProjects.map((project, idx) => (
-          <div className="project-card" key={idx}>
-            <img src={project.image} alt={project.title} />
+          <div className="project-card" key={idx} onClick={() => openPopup(project)} style={{cursor: 'pointer'}}>
+            <img src={project.images[0]} alt={project.title} />
             <div className="project-info">
               <h2>{project.title}</h2>
               <p>{project.description}</p>
@@ -116,6 +123,15 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      {/* Popup modal */}
+      {popupProject && (
+        <HeroImageGridModal
+          images={popupProject.images}
+          title={popupProject.title}
+          description={popupProject.description}
+          onClose={closePopup}
+        />
+      )}
     </div>
   );
 };
