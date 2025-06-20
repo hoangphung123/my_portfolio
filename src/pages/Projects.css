@@ -235,7 +235,7 @@ main {
 
 .slide-type {
     font-size: 1.1rem;
-    color: #ffd700;
+    color: #777774;
     margin-bottom: 16px;
     letter-spacing: 1px;
 }
@@ -265,18 +265,19 @@ main {
 }
 
 .slide-btn-main {
-    background: #ffd700;
+    background: #f7f6f5;
     color: #222;
 }
 
 .slide-btn-main:hover {
-    background: #ffe066;
+    background: #5e5d5d;
+    color: #e0e0e0;
 }
 
 .slide-btn-secondary {
     background: #222;
-    color: #ffd700;
-    border: 1px solid #ffd700;
+    color: #f3f3f0;
+    border: 1px solid #f5f4f2;
 }
 
 .slide-btn-secondary:hover {

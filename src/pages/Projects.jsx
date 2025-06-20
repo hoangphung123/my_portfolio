@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Projects.css";
 import project1 from '../assets/anh2.gif'
+import project2 from '../assets/anh3.gif'
+import project3 from '../assets/anh4.gif'
 
 const projectsData = [
   {
@@ -14,7 +16,7 @@ const projectsData = [
   {
     title: "NFT Collection",
     type: "Software",
-    image: "https://gamelade.vn/wp-content/uploads/2024/12/spirited_away.webp",
+    image: project2,
     description: "A platform to showcase and trade NFT collections.",
     visit: "#",
     source: "#"
@@ -22,7 +24,7 @@ const projectsData = [
   {
     title: "Mobile App UI",
     type: "Mobile",
-    image: "https://gamelade.vn/wp-content/uploads/2024/12/spirited_away.webp",
+    image: project3,
     description: "A modern mobile app interface design.",
     visit: "#",
     source: "#"
