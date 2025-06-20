@@ -116,7 +116,7 @@ main {
 }
 
 .project-card {
-    background: #181824;
+    background: rgba(20, 20, 20, 0.85);
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.18);
@@ -281,8 +281,8 @@ main {
 }
 
 .slide-btn-secondary {
-    background: #222;
-    color: #f3f3f0;
+    background: #222 !important;
+    color: #f3f3f0 !important;
     border: 1px solid #f5f4f2;
 }
 

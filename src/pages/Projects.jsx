@@ -18,7 +18,7 @@ const projectsData = [
   {
     title: "Showcasing Vietnam's Fish Sauce Heritage",
     type: "PowerPoint, AI",
-    images: [nuocmam1, nuocmam2, nuocmam4, nuocmam5, nuocmam3, nuocmam6],
+    images: [project1, nuocmam1, nuocmam2, nuocmam4, nuocmam5, nuocmam3, nuocmam6],
     description: "I supported a university student in completing a project to introduce and promote traditional Vietnamese fish sauce. Throughout the process, I helped with creating content, selecting images, designing the layout, and crafting a compelling narrative to highlight the product's authenticity and cultural value. The project was completed on time, successfully showcasing the essence of Vietnamese culinary culture, and earned an excellent grade of 9.3.",
     visit: "#",
     source: "#",
