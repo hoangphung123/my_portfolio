@@ -155,11 +155,14 @@ main {
     font-size: 1rem;
     color: #bbb;
     margin-bottom: 16px;
+    text-align: justify;
 }
 
 .project-links {
     display: flex;
+    justify-content: center;
     gap: 16px;
+    margin-top: 18px;
 }
 
 .project-links a {

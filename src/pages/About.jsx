@@ -7,7 +7,13 @@ import React, { useState, useRef } from 'react';
 const skills = [
   {
     title: 'Software & Website Development',
-    desc: 'I specialize in developing dynamic, responsive, and secure web applications using modern technologies.',
+    desc: [
+      "Proficient in responsive web design and development, ensuring an optimal user experience and fast loading times.",
+      "Skilled in HTML, CSS, JavaScript, and modern frameworks (such as React and Tailwind CSS) to create clean, maintainable front-end interfaces.",
+      "Experienced in integrating APIs and handling data to enhance interactivity and functionality across web projects.",
+      "Strong understanding of the full web development lifecycle from UI/UX design to front-end implementation and SEO optimization.",
+      "Able to deploy and manage websites on hosting/server environments, ensuring security, scalability, and stable performance."
+    ],
     icons: [
       { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', alt: 'HTML5' },
       { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', alt: 'CSS3' },
@@ -17,15 +23,16 @@ const skills = [
     ],
   },
   {
-    title: 'UI/UX & Graphic Design',
-    desc: 'I enjoy creating clean and user friendly interfaces, combining creativity and usability to deliver great user experiences.',
+    title: 'PowerPoint Design',
+    desc: [
+      "Having parents who are teachers, I often design PowerPoint slides for lectures and presentations. This hands-on experience has helped me master creating clear, visually appealing layouts, selecting appropriate colors and images, and applying smooth animations to make content engaging and easy to follow"
+    ],
     icons: [
-      { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg', alt: 'Photoshop' },
-      { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg', alt: 'Adobe XD' },
+      { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png', alt: 'Photoshop' },
+      { src: 'https://img.utdstc.com/icon/cf3/4c0/cf34c0da5a5d191da6d35ff079d170ece0c86c81092bccf5da3fe25f925789a1:200', alt: 'Adobe XD' },
       { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg', alt: 'Figma' },
       { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg', alt: 'Canva' },
     ],
-    tools: true,
   },
 ];
 
@@ -131,7 +138,7 @@ const About = () => {
               <div className="about-intro-row" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div className="about-intro-row1" style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '30', textAlign: 'left', width: '100%', gap: '32px' }}>
                   <div className="about-avatar-col" style={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
-                    <img className="about-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar" />
+                    <img className="about-avatar" src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/241463413_1251030795333931_2171947881173947593_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGgr6NKFMQ9t3iwTA5od_lYAJKASuPf_FgAkoBK49_8WDYtCVDqrmQK6kMxxN1Tw30_Vrwy37-IqRCRi-RY5DQm&_nc_ohc=J1CwsvhkxFoQ7kNvwF_cHIB&_nc_oc=AdmtYOhHGBAh3sPqkTJTEDjFI5s8k41j4KIUr4NDVUG3lKjERV_pqqUKCWXarWUmYTw&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=5uGyDv4EMlEMc_xjdFbgAg&oh=00_AfPxVo4Lp4KDUKeeKWfRlC-OWZD9lBRlTKiudw1UX4EO4Q&oe=685B225C" alt="avatar" />
                   </div>
                   <div className="about-info-col" style={{ flex: 2 }}>
                     <div className="about-intro-header">
@@ -176,7 +183,15 @@ const About = () => {
                 {skills.map((skill, idx) => (
                   <div className={`skill-box${skill.tools ? ' highlight' : ''}`} key={idx}>
                     <h4>{skill.title}</h4>
-                    <p>{skill.desc}</p>
+                    {Array.isArray(skill.desc) ? (
+                      <ul className="skill-desc-list">
+                        {skill.desc.map((item, i) => (
+                          <li key={i} style={{ textAlign: 'left', listStyle: 'disc', marginLeft: 20 }}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>{skill.desc}</p>
+                    )}
                     <div className="skill-icons">
                       {skill.icons.map((icon, i) => (
                         <img src={icon.src} alt={icon.alt} key={i} />

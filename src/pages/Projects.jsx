@@ -5,16 +5,24 @@ import project2 from '../assets/anh3.gif'
 import project3 from '../assets/anh4.gif'
 import project4 from '../assets/anh5.gif'
 import project5 from '../assets/anh1.gif'
+
+import nuocmam1 from '../assets/nuocmam1.png'
+import nuocmam2 from '../assets/nuocmam2.png'
+import nuocmam3 from '../assets/nuocmam3.png'
+import nuocmam4 from '../assets/nuocmam4.png'
+import nuocmam5 from '../assets/nuocmam5.png'
+import nuocmam6 from '../assets/nuocmam6.png'
 import HeroImageGridModal from '../components/HeroImageGridModal';
 
 const projectsData = [
   {
-    title: "The Cities Within",
-    type: "PowerPoint",
-    images: [project1, project2, project2, project4],
-    description: "An action role playing demo game. Embark on an epic journey and build your own city, utilizing electric power. Explore a vast world, recruit new agents, and build your own city. Each agent has their own unique abilities, and you might need to solve puzzles, defeat enemies, and gather resources.",
+    title: "Showcasing Vietnam's Fish Sauce Heritage",
+    type: "PowerPoint, AI",
+    images: [nuocmam1, nuocmam2, nuocmam4, nuocmam5, nuocmam3, nuocmam6],
+    description: "I supported a university student in completing a project to introduce and promote traditional Vietnamese fish sauce. Throughout the process, I helped with creating content, selecting images, designing the layout, and crafting a compelling narrative to highlight the product's authenticity and cultural value. The project was completed on time, successfully showcasing the essence of Vietnamese culinary culture, and earned an excellent grade of 9.3.",
     visit: "#",
-    source: "#"
+    source: "#",
+    download: "#"
   },
   {
     title: "NFT Collection",
@@ -22,7 +30,8 @@ const projectsData = [
     images: [project2, project3, project1],
     description: "A platform to showcase and trade NFT collections.",
     visit: "#",
-    source: "#"
+    source: "#",
+    download: "#"
   },
   {
     title: "Mobile App UI",
@@ -30,7 +39,8 @@ const projectsData = [
     images: [project3, project4, project2],
     description: "A modern mobile app interface design.",
     visit: "#",
-    source: "#"
+    source: "#",
+    download: "#"
   },
   {
     title: "Login System",
@@ -86,11 +96,20 @@ const Projects = () => {
             </div>
             <div className="slide-info">
               <h2 className="slide-title">{slideProject.title}</h2>
-              <p className="slide-type">{slideProject.type} Tracking Software</p>
+              <p className="slide-type">{slideProject.type}</p>
               <p className="slide-desc">{slideProject.description}</p>
               <div className="slide-links">
-                <a href={slideProject.visit} target="_blank" rel="noopener noreferrer" className="slide-btn-main">Visit Page</a>
-                <a href={slideProject.source} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Github</a>
+                {slideProject.type.toLowerCase().includes("powerpoint") ? (
+                  <>
+                    <button className="slide-btn-main" onClick={() => openPopup(slideProject)}>Detail</button>
+                    <a href={slideProject.download || '#'} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Download</a>
+                  </>
+                ) : (
+                  <>
+                    <a href={slideProject.visit} target="_blank" rel="noopener noreferrer" className="slide-btn-main">Visit Page</a>
+                    <a href={slideProject.source} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Github</a>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -110,14 +129,23 @@ const Projects = () => {
       </div>
       <div className="projects-grid">
         {filteredProjects.map((project, idx) => (
-          <div className="project-card" key={idx} onClick={() => openPopup(project)} style={{cursor: 'pointer'}}>
+          <div className="project-card" key={idx} style={{cursor: 'pointer'}}>
             <img src={project.images[0]} alt={project.title} />
             <div className="project-info">
               <h2>{project.title}</h2>
               <p>{project.description}</p>
               <div className="project-links">
-                <a href={project.visit} target="_blank" rel="noopener noreferrer">Visit Page</a>
-                <a href={project.source} target="_blank" rel="noopener noreferrer">Source</a>
+                {project.type.toLowerCase().includes("powerpoint") ? (
+                  <>
+                    <button onClick={() => openPopup(project)} className="slide-btn-main">Detail</button>
+                    <a href={project.download || '#'} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Download</a>
+                  </>
+                ) : (
+                  <>
+                    <a href={project.visit} target="_blank" rel="noopener noreferrer">Visit Page</a>
+                    <a href={project.source} target="_blank" rel="noopener noreferrer">Source</a>
+                  </>
+                )}
               </div>
             </div>
           </div>
