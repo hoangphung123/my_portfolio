@@ -3,11 +3,12 @@ import "./Projects.css";
 import project1 from '../assets/anh2.gif'
 import project2 from '../assets/anh3.gif'
 import project3 from '../assets/anh4.gif'
+import project4 from '../assets/anh5.gif'
 
 const projectsData = [
   {
     title: "The Cities Within",
-    type: "Game",
+    type: "PowerPoint",
     image: project1,
     description: "An action role playing demo game. Embark on an epic journey and build your own city, utilizing electric power. Explore a vast world, recruit new agents, and build your own city. Each agent has their own unique abilities, and you might need to solve puzzles, defeat enemies, and gather resources.",
     visit: "#",
@@ -15,7 +16,7 @@ const projectsData = [
   },
   {
     title: "NFT Collection",
-    type: "Software",
+    type: "PowerPoint",
     image: project2,
     description: "A platform to showcase and trade NFT collections.",
     visit: "#",
@@ -23,7 +24,7 @@ const projectsData = [
   },
   {
     title: "Mobile App UI",
-    type: "Mobile",
+    type: "PowerPoint",
     image: project3,
     description: "A modern mobile app interface design.",
     visit: "#",
@@ -31,15 +32,15 @@ const projectsData = [
   },
   {
     title: "Login System",
-    type: "Software",
-    image: "https://gamelade.vn/wp-content/uploads/2024/12/spirited_away.webp",
+    type: "website",
+    image: project4,
     description: "A secure login and authentication system.",
     visit: "#",
     source: "#"
   }
 ];
 
-const filters = ["All", "Mobile", "Software", "Game"];
+const filters = ["All", "PowerPoint", "website", "Game"];
 
 const Projects = () => {
   const [selected, setSelected] = useState("All");
@@ -65,23 +66,28 @@ const Projects = () => {
         <p className="subtitle">A Collection of My Recent Works</p>
       </div>
       {/* Slide section */}
-      <div className="project-slide">
-        <div className="slide-content-wrapper">
-          <div className="slide-image">
-            <img src={slideProject.image} alt={slideProject.title} />
-          </div>
-          <div className="slide-info">
-            <h2 className="slide-title">{slideProject.title}</h2>
-            <p className="slide-type">{slideProject.type} Tracking Software</p>
-            <p className="slide-desc">{slideProject.description}</p>
-            <div className="slide-links">
-              <a href={slideProject.visit} target="_blank" rel="noopener noreferrer" className="slide-btn-main">Visit Page</a>
-              <a href={slideProject.source} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Github</a>
+      <div style={{position: 'relative'}}>
+        <div className="slide-nav-bar" style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 32, marginBottom: 16, position: 'absolute', top: -50, right: 0, zIndex: 3, width: '100%'}}>
+          <button className="slide-btn nav-btn" onClick={handlePrev}>{'<'}</button>
+          <span className="slide-nav-label">project slide</span>
+          <button className="slide-btn nav-btn" onClick={handleNext}>{'>'}</button>
+        </div>
+        <div className="project-slide" style={{marginTop: '48px'}}>
+          <div className="slide-content-wrapper">
+            <div className="slide-image">
+              <img src={slideProject.image} alt={slideProject.title} />
+            </div>
+            <div className="slide-info">
+              <h2 className="slide-title">{slideProject.title}</h2>
+              <p className="slide-type">{slideProject.type} Tracking Software</p>
+              <p className="slide-desc">{slideProject.description}</p>
+              <div className="slide-links">
+                <a href={slideProject.visit} target="_blank" rel="noopener noreferrer" className="slide-btn-main">Visit Page</a>
+                <a href={slideProject.source} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Github</a>
+              </div>
             </div>
           </div>
         </div>
-        <button className="slide-btn left" onClick={handlePrev}>&lt;</button>
-        <button className="slide-btn right" onClick={handleNext}>&gt;</button>
       </div>
       {/* End slide section */}
       <div className="projects-filters">
