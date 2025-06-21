@@ -12,42 +12,55 @@ import nuocmam3 from '../assets/nuocmam3.png'
 import nuocmam4 from '../assets/nuocmam4.png'
 import nuocmam5 from '../assets/nuocmam5.png'
 import nuocmam6 from '../assets/nuocmam6.png'
+
+import IT1 from '../assets/IT1.png'
+import IT2 from '../assets/IT2.png'
+import IT3 from '../assets/IT3.png'
+import IT4 from '../assets/IT4.png'
+import IT5 from '../assets/IT5.png'
+
+import Tamcam1 from '../assets/tamcam1.png'
+import Tamcam2 from '../assets/Tamcam2.png'
+import Tamcam3 from '../assets/Tamcam3.png'
+import Tamcam4 from '../assets/Tamcam4.png'
+import Tamcam5 from '../assets/Tamcam5.png'
+
 import HeroImageGridModal from '../components/HeroImageGridModal';
 
 const projectsData = [
   {
     title: "Showcasing Vietnam's Fish Sauce Heritage",
-    type: "PowerPoint, AI",
+    type: "PowerPoint",
     images: [project1, nuocmam1, nuocmam2, nuocmam4, nuocmam5, nuocmam3, nuocmam6],
     description: "I supported a university student in completing a project to introduce and promote traditional Vietnamese fish sauce. Throughout the process, I helped with creating content, selecting images, designing the layout, and crafting a compelling narrative to highlight the product's authenticity and cultural value. The project was completed on time, successfully showcasing the essence of Vietnamese culinary culture, and earned an excellent grade of 9.3.",
     visit: "#",
     source: "#",
-    download: "#"
+    download: "https://docs.google.com/presentation/d/1iKEiodwzTL9QxjlcyFCXGdn1muBypbdY/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true"
   },
   {
-    title: "NFT Collection",
+    title: "Object-Oriented Software Engineering",
     type: "PowerPoint",
-    images: [project2, project3, project1],
-    description: "A platform to showcase and trade NFT collections.",
+    images: [project2, IT1, IT2, IT3, IT4, IT5],
+    description: "This was a PowerPoint created for a group project in the OOSE course of the IT program. I chose the computer screen as the central design concept, making the visual style highly relevant to the presentation’s content. The bold, rectangular layout conveys a sense of logic and formality, reinforcing the structured and professional tone of the presentation.",
     visit: "#",
     source: "#",
-    download: "#"
+    download: "https://docs.google.com/presentation/d/1283ltxkzgEFlzvWnmHla4pSUyEfMZqKE/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true"
   },
   {
-    title: "Mobile App UI",
+    title: "Analysis of Tấm Cám",
     type: "PowerPoint",
-    images: [project3, project4, project2],
-    description: "A modern mobile app interface design.",
+    images: [project3, Tamcam1, Tamcam2, Tamcam3, Tamcam4, Tamcam5],
+    description: "Tấm Cám’ was a PowerPoint I created for a literary analysis course at university. The slides emphasize traditional Vietnamese elements, featuring iconic images like áo dài, lotus flowers, and traditional women. I incorporated smooth shapes, elegant lines, and a distinctive color palette to evoke a sense of cultural authenticity. The presentation left a strong impression on the audience and made the literary analysis session much more engaging and enjoyable.",
     visit: "#",
     source: "#",
-    download: "#"
+    download: "https://docs.google.com/presentation/d/11n6m4-9xdD5gj09ZNopvEwnD_yGSfkdC/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true"
   },
   {
     title: "Login System",
     type: "website",
     images: [project4, project1, project5],
     description: "A secure login and authentication system.",
-    visit: "#",
+    visit: "https://future.kouiki-kansai.jp/",
     source: "#"
   }
 ];

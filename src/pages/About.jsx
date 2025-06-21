@@ -41,22 +41,22 @@ const educations = [
     logo: 'https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/482009044_631623413063121_7724380613014001949_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF0KK1wlWr1ndVg2NuyeVyLzIrAmpbBL7bMisCalsEvtmJ-8N6VEd_GgMKWLUvuFzJbDdlyThFXcz2lY3Qg7v8d&_nc_ohc=K-PsUNo67NMQ7kNvwHUx3mr&_nc_oc=AdnaCVtDsS8-Yuvd41Pp_PUHEPpTR2RMetkxGX8sTdCORqrcjZkZf2AmiJIm-PVTbyQ&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=74JoVwnSkF3vlnVSp-gszw&oh=00_AfMhLJOBi4q3TUjr7JuLmKEHOWKUGdTAsH2ey4bCTywVOA&oe=6859C3B8',
     name: 'Southern Philippines Baptist Theological Seminary',
     level: 'High School Level',
-    desc: "SFBTS is dedicated to teaching God's Word, equipping God's servants, and sending God's workers. My alma mater, a private educational institution located in Puerto Princesa City, was established through the inspiration and vision of a dedicated missionary who recognized the spiritual needs of the city's children of God.",
-    year: '2015 - 2021',
+    desc: "It is one of the three high schools in Krong Ana District. Although located in a rural area, the school’s teaching quality and faculty expertise are exceptional, with many teachers holding Master’s degrees and being well-known across the province for their exam preparation. Thanks to this, the school’s graduation rate is consistently high. I’m proud to have studied at such a high-quality school",
+    year: '2017 - 2020',
   },
   {
     logo: 'https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/508828613_2169721100131558_2860552920310533796_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF3NKoW5FqapcTKDRM87cTS5BnLy_o_4_rkGcvL-j_j-gFg--Kj-bseAPLl6jLlStE2WXdyl01hB1GK6mzX9-6S&_nc_ohc=IrgCe-enfDsQ7kNvwHVyzBU&_nc_oc=Adnc-ckNm7Z0rTQkG1f4ayHFeYTbh6O8f6RMSfqdZxAO1XlZcUMeEQFBnNQMumO-PGw&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=FsQfsRw9A4iuv3Cj6u5_Sg&oh=00_AfPjCtHoxHeBONWzgQ9sYLWBIFxo32bLBlJdBshZ7RwTdQ&oe=68589664',
     name: 'University of the Immaculate Conception',
     level: 'Senior High School Level',
     desc: 'I graduated from Ho Chi Minh City University of Technology and Education (HCMUTE) – one of the leading universities in Vietnam in the fields of engineering and technology. HCMUTE is known for its high-quality academic programs, accredited by international standards such as AUN-QA and ABET, and for its modern, practice-oriented learning environment. The university maintains strong partnerships with institutions worldwide, giving students early access to global knowledge and advanced technologies. It is also a place that fosters creativity, entrepreneurship, and solid professional skills among its students.',
-    year: '2021 - 2023',
+    year: '2020 - 2024',
   },
   {
-    logo: 'https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/508828613_2169721100131558_2860552920310533796_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF3NKoW5FqapcTKDRM87cTS5BnLy_o_4_rkGcvL-j_j-gFg--Kj-bseAPLl6jLlStE2WXdyl01hB1GK6mzX9-6S&_nc_ohc=IrgCe-enfDsQ7kNvwHVyzBU&_nc_oc=Adnc-ckNm7Z0rTQkG1f4ayHFeYTbh6O8f6RMSfqdZxAO1XlZcUMeEQFBnNQMumO-PGw&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=FsQfsRw9A4iuv3Cj6u5_Sg&oh=00_AfPjCtHoxHeBONWzgQ9sYLWBIFxo32bLBlJdBshZ7RwTdQ&oe=68589664',
+    logo: 'https://static.ybox.vn/2020/9/1/1601261656952-logo%20hinh%20tron.png',
     name: 'University of Southeastern Philippines',
-    level: 'College Level',
-    desc: 'USEP is a premier university in the region, offering quality education and research. Here, I am pursuing my Bachelor of Science in Computer Science, focusing on software engineering and UI/UX design.',
-    year: '2023 - Present',
+    level: 'External study program',
+    desc: 'I have enrolled in a basic PowerPoint course here. Since I enjoy working with PowerPoint, I looked for and signed up for an online course to help me strengthen and master the fundamentals of design.',
+    year: '2021 - Present',
   },
 ];
 
@@ -138,7 +138,7 @@ const About = () => {
               <div className="about-intro-row" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div className="about-intro-row1" style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '30', textAlign: 'left', width: '100%', gap: '32px' }}>
                   <div className="about-avatar-col" style={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
-                    <img className="about-avatar" src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/241463413_1251030795333931_2171947881173947593_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGgr6NKFMQ9t3iwTA5od_lYAJKASuPf_FgAkoBK49_8WDYtCVDqrmQK6kMxxN1Tw30_Vrwy37-IqRCRi-RY5DQm&_nc_ohc=J1CwsvhkxFoQ7kNvwF_cHIB&_nc_oc=AdmtYOhHGBAh3sPqkTJTEDjFI5s8k41j4KIUr4NDVUG3lKjERV_pqqUKCWXarWUmYTw&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=5uGyDv4EMlEMc_xjdFbgAg&oh=00_AfPxVo4Lp4KDUKeeKWfRlC-OWZD9lBRlTKiudw1UX4EO4Q&oe=685B225C" alt="avatar" />
+                    <img className="about-avatar" src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/509364339_2171343073302694_4422438780183955843_n.jpg?stp=dst-jpg_p552x414_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFU_28W4tAXvEXc91grfbs8qrfokOXVjiyqt-iQ5dWOLAJgnnnyxLhUvtyImUxVovLmKqyajI3mdVRrN1UlYeQ0&_nc_ohc=EOABd5o_GN8Q7kNvwGshma4&_nc_oc=AdnNu-AorIraqFR6JpsAkso2fmGrARO3v_NN3DJrfCGckbgLb0KPYhyqtAInBQf40io&_nc_zt=23&_nc_ht=scontent.fsgn2-5.fna&_nc_gid=XQSzlty4GkXcIYjG3owzZw&oh=00_AfM4X98PGvY4ig3hC-bkuirrVSbmRuWJmU4KSSP-vbE-nQ&oe=685B60D2" alt="avatar" />
                   </div>
                   <div className="about-info-col" style={{ flex: 2 }}>
                     <div className="about-intro-header">
