@@ -39,21 +39,21 @@ const skills = [
 const educations = [
   {
     logo: 'https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/482009044_631623413063121_7724380613014001949_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF0KK1wlWr1ndVg2NuyeVyLzIrAmpbBL7bMisCalsEvtmJ-8N6VEd_GgMKWLUvuFzJbDdlyThFXcz2lY3Qg7v8d&_nc_ohc=K-PsUNo67NMQ7kNvwHUx3mr&_nc_oc=AdnaCVtDsS8-Yuvd41Pp_PUHEPpTR2RMetkxGX8sTdCORqrcjZkZf2AmiJIm-PVTbyQ&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=74JoVwnSkF3vlnVSp-gszw&oh=00_AfMhLJOBi4q3TUjr7JuLmKEHOWKUGdTAsH2ey4bCTywVOA&oe=6859C3B8',
-    name: 'Southern Philippines Baptist Theological Seminary',
+    name: 'THPT Krong Ana',
     level: 'High School Level',
     desc: "It is one of the three high schools in Krong Ana District. Although located in a rural area, the school’s teaching quality and faculty expertise are exceptional, with many teachers holding Master’s degrees and being well-known across the province for their exam preparation. Thanks to this, the school’s graduation rate is consistently high. I’m proud to have studied at such a high-quality school",
     year: '2017 - 2020',
   },
   {
     logo: 'https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/508828613_2169721100131558_2860552920310533796_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF3NKoW5FqapcTKDRM87cTS5BnLy_o_4_rkGcvL-j_j-gFg--Kj-bseAPLl6jLlStE2WXdyl01hB1GK6mzX9-6S&_nc_ohc=IrgCe-enfDsQ7kNvwHVyzBU&_nc_oc=Adnc-ckNm7Z0rTQkG1f4ayHFeYTbh6O8f6RMSfqdZxAO1XlZcUMeEQFBnNQMumO-PGw&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=FsQfsRw9A4iuv3Cj6u5_Sg&oh=00_AfPjCtHoxHeBONWzgQ9sYLWBIFxo32bLBlJdBshZ7RwTdQ&oe=68589664',
-    name: 'University of the Immaculate Conception',
+    name: 'Ho Chi Minh City University of Technology and Education (HCMUTE)',
     level: 'Senior High School Level',
     desc: 'I graduated from Ho Chi Minh City University of Technology and Education (HCMUTE) – one of the leading universities in Vietnam in the fields of engineering and technology. HCMUTE is known for its high-quality academic programs, accredited by international standards such as AUN-QA and ABET, and for its modern, practice-oriented learning environment. The university maintains strong partnerships with institutions worldwide, giving students early access to global knowledge and advanced technologies. It is also a place that fosters creativity, entrepreneurship, and solid professional skills among its students.',
     year: '2020 - 2024',
   },
   {
     logo: 'https://static.ybox.vn/2020/9/1/1601261656952-logo%20hinh%20tron.png',
-    name: 'University of Southeastern Philippines',
+    name: 'Goedu',
     level: 'External study program',
     desc: 'I have enrolled in a basic PowerPoint course here. Since I enjoy working with PowerPoint, I looked for and signed up for an online course to help me strengthen and master the fundamentals of design.',
     year: '2021 - Present',
