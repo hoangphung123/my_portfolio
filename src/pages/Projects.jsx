@@ -56,10 +56,10 @@ const projectsData = [
     download: "https://docs.google.com/presentation/d/11n6m4-9xdD5gj09ZNopvEwnD_yGSfkdC/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true"
   },
   {
-    title: "Login System",
+    title: "関西・WEBパビリオン",
     type: "website",
     images: [project4, project1, project5],
-    description: "A secure login and authentication system.",
+    description: "Introducing the beauty of Kansai Prefecture at the Osaka exhibition, Kansai Expo 2025. •	Participate in discussions, edit the design, and decide on the visual layout of the website.",
     visit: "https://future.kouiki-kansai.jp/",
     source: "#"
   }
