@@ -33,7 +33,7 @@ const Navbar = () => {
           fontWeight: "bold",
         }}
       >
-        Portfolio
+        HiPPT
       </Link>
 
       <div style={{ display: "flex", gap: "2rem" }}>

@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar';
 import DustBackground from '../components/DustBackground';
 import './About.css';
 import React, { useState, useRef } from 'react';
+import AvaTar from '../assets/daxong.png'
 
 
 const skills = [
@@ -138,7 +139,7 @@ const About = () => {
               <div className="about-intro-row" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div className="about-intro-row1" style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '30', textAlign: 'left', width: '100%', gap: '32px' }}>
                   <div className="about-avatar-col" style={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
-                    <img className="about-avatar" src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/509364339_2171343073302694_4422438780183955843_n.jpg?stp=dst-jpg_p552x414_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFU_28W4tAXvEXc91grfbs8qrfokOXVjiyqt-iQ5dWOLAJgnnnyxLhUvtyImUxVovLmKqyajI3mdVRrN1UlYeQ0&_nc_ohc=EOABd5o_GN8Q7kNvwGshma4&_nc_oc=AdnNu-AorIraqFR6JpsAkso2fmGrARO3v_NN3DJrfCGckbgLb0KPYhyqtAInBQf40io&_nc_zt=23&_nc_ht=scontent.fsgn2-5.fna&_nc_gid=XQSzlty4GkXcIYjG3owzZw&oh=00_AfM4X98PGvY4ig3hC-bkuirrVSbmRuWJmU4KSSP-vbE-nQ&oe=685B60D2" alt="avatar" />
+                    <img className="about-avatar" src={AvaTar} alt="avatar" />
                   </div>
                   <div className="about-info-col" style={{ flex: 2 }}>
                     <div className="about-intro-header">
