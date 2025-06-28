@@ -74,6 +74,7 @@ const Projects = () => {
           <div className="slide-content-wrapper">
             <div className="slide-image">
               <LazyImage 
+                key={slideIdx}
                 src={slideProject?.images[0]} 
                 alt={slideProject?.title} 
                 className="slide-main-image"
