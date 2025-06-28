@@ -3,6 +3,7 @@ import "./Projects.css";
 import { projectsData, getProjectsByType, getFeaturedProjects } from '../data/projects';
 import LazyImage from '../components/LazyImage';
 import HeroImageGridModal from '../components/HeroImageGridModal';
+import { trackProjectView, trackProjectDownload, trackProjectVisit, trackFilterUsage } from '../components/Analytics';
 
 const filters = ["All", "PowerPoint", "website", "Game"];
 
@@ -32,8 +33,28 @@ const Projects = () => {
   const slideProject = featuredProjects[slideIdx];
 
   // Popup handlers
-  const openPopup = (project) => setPopupProject(project);
+  const openPopup = (project) => {
+    setPopupProject(project);
+    trackProjectView(project.title);
+  };
+  
   const closePopup = () => setPopupProject(null);
+
+  // Filter handler with tracking
+  const handleFilterChange = (filterType) => {
+    setSelected(filterType);
+    trackFilterUsage(filterType);
+  };
+
+  // Download handler with tracking
+  const handleDownload = (project) => {
+    trackProjectDownload(project.title);
+  };
+
+  // Visit handler with tracking
+  const handleVisit = (project) => {
+    trackProjectVisit(project.title, project.visit);
+  };
 
   return (
     <div className="projects-page">
@@ -66,11 +87,27 @@ const Projects = () => {
                 {slideProject?.type.toLowerCase().includes("powerpoint") ? (
                   <>
                     <button className="slide-btn-main" onClick={() => openPopup(slideProject)}>Detail</button>
-                    <a href={slideProject?.download || '#'} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Download</a>
+                    <a 
+                      href={slideProject?.download || '#'} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="slide-btn-secondary"
+                      onClick={() => handleDownload(slideProject)}
+                    >
+                      Download
+                    </a>
                   </>
                 ) : (
                   <>
-                    <a href={slideProject?.visit} target="_blank" rel="noopener noreferrer" className="slide-btn-main">Visit Page</a>
+                    <a 
+                      href={slideProject?.visit} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="slide-btn-main"
+                      onClick={() => handleVisit(slideProject)}
+                    >
+                      Visit Page
+                    </a>
                     <a href={slideProject?.source} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Github</a>
                   </>
                 )}
@@ -86,7 +123,7 @@ const Projects = () => {
           <button
             key={f}
             className={selected === f ? "active" : ""}
-            onClick={() => setSelected(f)}
+            onClick={() => handleFilterChange(f)}
           >
             {f}
           </button>
@@ -109,11 +146,26 @@ const Projects = () => {
                 {project.type.toLowerCase().includes("powerpoint") ? (
                   <>
                     <button onClick={() => openPopup(project)} className="slide-btn-main">Detail</button>
-                    <a href={project.download || '#'} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Download</a>
+                    <a 
+                      href={project.download || '#'} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="slide-btn-secondary"
+                      onClick={() => handleDownload(project)}
+                    >
+                      Download
+                    </a>
                   </>
                 ) : (
                   <>
-                    <a href={project.visit} target="_blank" rel="noopener noreferrer">Visit Page</a>
+                    <a 
+                      href={project.visit} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      onClick={() => handleVisit(project)}
+                    >
+                      Visit Page
+                    </a>
                     <a href={project.source} target="_blank" rel="noopener noreferrer">Source</a>
                   </>
                 )}
