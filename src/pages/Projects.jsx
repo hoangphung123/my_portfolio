@@ -25,6 +25,10 @@ import Tamcam3 from '../assets/Tamcam3.png'
 import Tamcam4 from '../assets/Tamcam4.png'
 import Tamcam5 from '../assets/Tamcam5.png'
 
+import Bussiness1 from '../assets/Bussines1.png'
+
+import Nature1 from '../assets/nature1.png'
+
 import HeroImageGridModal from '../components/HeroImageGridModal';
 
 const projectsData = [
@@ -62,7 +66,25 @@ const projectsData = [
     description: "Introducing the beauty of Kansai Prefecture at the Osaka exhibition, Kansai Expo 2025. •	Participate in discussions, edit the design, and decide on the visual layout of the website.",
     visit: "https://future.kouiki-kansai.jp/",
     source: "#"
-  }
+  },
+  {
+    title: "Business Template",
+    type: "PowerPoint",
+    images: [Bussiness1],
+    description: "This template was created to give everyone a professional business template.",
+    visit: "#",
+    source: "#",
+    download: "https://docs.google.com/presentation/d/1iKEiodwzTL9QxjlcyFCXGdn1muBypbdY/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true"
+  },
+  {
+    title: "Nature Template",
+    type: "PowerPoint",
+    images: [Nature1],
+    description: "This template was created to give everyone a professional Nature template.",
+    visit: "#",
+    source: "#",
+    download: "https://docs.google.com/presentation/d/1iKEiodwzTL9QxjlcyFCXGdn1muBypbdY/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true"
+  },
 ];
 
 const filters = ["All", "PowerPoint", "website", "Game"];
