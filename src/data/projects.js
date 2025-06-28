@@ -4,13 +4,13 @@ export const projectsData = [
     title: "Showcasing Vietnam's Fish Sauce Heritage",
     type: "PowerPoint",
     images: [
-      '/src/assets/anh2.gif',
-      '/src/assets/nuocmam1.png',
-      '/src/assets/nuocmam2.png',
-      '/src/assets/nuocmam4.png',
-      '/src/assets/nuocmam5.png',
-      '/src/assets/nuocmam3.png',
-      '/src/assets/nuocmam6.png'
+      '/assets/anh2.gif',
+      '/assets/nuocmam1.png',
+      '/assets/nuocmam2.png',
+      '/assets/nuocmam4.png',
+      '/assets/nuocmam5.png',
+      '/assets/nuocmam3.png',
+      '/assets/nuocmam6.png'
     ],
     description: "I supported a university student in completing a project to introduce and promote traditional Vietnamese fish sauce. Throughout the process, I helped with creating content, selecting images, designing the layout, and crafting a compelling narrative to highlight the product's authenticity and cultural value. The project was completed on time, successfully showcasing the essence of Vietnamese culinary culture, and earned an excellent grade of 9.3.",
     visit: "#",
@@ -23,12 +23,12 @@ export const projectsData = [
     title: "Object-Oriented Software Engineering",
     type: "PowerPoint",
     images: [
-      '/src/assets/anh3.gif',
-      '/src/assets/IT1.png',
-      '/src/assets/IT2.png',
-      '/src/assets/IT3.png',
-      '/src/assets/IT4.png',
-      '/src/assets/IT5.png'
+      '/assets/anh3.gif',
+      '/assets/IT1.png',
+      '/assets/IT2.png',
+      '/assets/IT3.png',
+      '/assets/IT4.png',
+      '/assets/IT5.png'
     ],
     description: "This was a PowerPoint created for a group project in the OOSE course of the IT program. I chose the computer screen as the central design concept, making the visual style highly relevant to the presentation's content. The bold, rectangular layout conveys a sense of logic and formality, reinforcing the structured and professional tone of the presentation.",
     visit: "#",
@@ -41,12 +41,12 @@ export const projectsData = [
     title: "Analysis of Tấm Cám",
     type: "PowerPoint",
     images: [
-      '/src/assets/anh4.gif',
-      '/src/assets/tamcam1.png',
-      '/src/assets/Tamcam2.png',
-      '/src/assets/Tamcam3.png',
-      '/src/assets/Tamcam4.png',
-      '/src/assets/Tamcam5.png'
+      '/assets/anh4.gif',
+      '/assets/tamcam1.png',
+      '/assets/Tamcam2.png',
+      '/assets/Tamcam3.png',
+      '/assets/Tamcam4.png',
+      '/assets/Tamcam5.png'
     ],
     description: "Tấm Cám' was a PowerPoint I created for a literary analysis course at university. The slides emphasize traditional Vietnamese elements, featuring iconic images like áo dài, lotus flowers, and traditional women. I incorporated smooth shapes, elegant lines, and a distinctive color palette to evoke a sense of cultural authenticity. The presentation left a strong impression on the audience and made the literary analysis session much more engaging and enjoyable.",
     visit: "#",
@@ -59,9 +59,9 @@ export const projectsData = [
     title: "関西・WEBパビリオン",
     type: "website",
     images: [
-      '/src/assets/anh5.gif',
-      '/src/assets/anh2.gif',
-      '/src/assets/anh1.gif'
+      '/assets/anh5.gif',
+      '/assets/anh2.gif',
+      '/assets/anh1.gif'
     ],
     description: "Introducing the beauty of Kansai Prefecture at the Osaka exhibition, Kansai Expo 2025. • Participate in discussions, edit the design, and decide on the visual layout of the website.",
     visit: "https://future.kouiki-kansai.jp/",
@@ -72,7 +72,7 @@ export const projectsData = [
     id: 5,
     title: "Business Template",
     type: "PowerPoint",
-    images: ['/src/assets/Bussines1.png'],
+    images: ['/assets/Bussines1.png'],
     description: "This template was created to give everyone a professional business template.",
     visit: "#",
     source: "#",
@@ -83,7 +83,7 @@ export const projectsData = [
     id: 6,
     title: "Nature Template",
     type: "PowerPoint",
-    images: ['/src/assets/nature1.png'],
+    images: ['/assets/nature1.png'],
     description: "This template was created to give everyone a professional Nature template.",
     visit: "#",
     source: "#",
