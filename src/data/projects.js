@@ -90,6 +90,17 @@ export const projectsData = [
     download: "https://docs.google.com/presentation/d/1iKEiodwzTL9QxjlcyFCXGdn1muBypbdY/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true",
     featured: false
   },
+  {
+    id: 7,
+    title: "Slide Template",
+    type: "PowerPoint",
+    images: ['/assets/slide1.gif'],
+    description: "This template was created to give everyone a professional Slide template in PowerPoint.",
+    visit: "#",
+    source: "#",
+    download: "https://docs.google.com/presentation/d/1iKEiodwzTL9QxjlcyFCXGdn1muBypbdY/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true",
+    featured: false
+  },
 ];
 
 export const getFeaturedProjects = () => {
