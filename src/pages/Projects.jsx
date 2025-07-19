@@ -34,6 +34,7 @@ const Projects = () => {
 
   // Popup handlers
   const openPopup = (project) => {
+    if (project.clock) return; // Don't open popup for clocked projects
     setPopupProject(project);
     trackProjectView(project.title);
   };
@@ -83,33 +84,42 @@ const Projects = () => {
             <div className="slide-info">
               <h2 className="slide-title">{slideProject?.title}</h2>
               <p className="slide-type">{slideProject?.type}</p>
-              <p className="slide-desc">{slideProject?.description}</p>
+              <p className="slide-desc" dangerouslySetInnerHTML={{ __html: slideProject?.description }}></p>
               <div className="slide-links">
-                {slideProject?.type.toLowerCase().includes("powerpoint") ? (
-                  <>
-                    <button className="slide-btn-main" onClick={() => openPopup(slideProject)}>Detail</button>
-                    <a 
-                      href={slideProject?.download || '#'} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="slide-btn-secondary"
-                      onClick={() => handleDownload(slideProject)}
-                    >
-                      Download
-                    </a>
-                  </>
+                {slideProject?.clock ? (
+                  <div className="clock-overlay">
+                    <a href="/contact" className="contact-link">Contact for more</a>
+                  </div>
                 ) : (
                   <>
-                    <a 
-                      href={slideProject?.visit} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="slide-btn-main"
-                      onClick={() => handleVisit(slideProject)}
-                    >
-                      Visit Page
-                    </a>
-                    <a href={slideProject?.source} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Github</a>
+                    {slideProject?.type.toLowerCase().includes("powerpoint") ? (
+                      <>
+                        <button className="slide-btn-main" onClick={() => openPopup(slideProject)} disabled={slideProject?.clock}>Detail</button>
+                        <a 
+                          href={slideProject?.download || '#'} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="slide-btn-secondary"
+                          onClick={() => handleDownload(slideProject)}
+                          style={{pointerEvents: slideProject?.clock ? 'none' : 'auto'}}
+                        >
+                          Download
+                        </a>
+                      </>
+                    ) : (
+                      <>
+                        <a 
+                          href={slideProject?.visit} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="slide-btn-main"
+                          onClick={() => handleVisit(slideProject)}
+                        >
+                          Visit Page
+                        </a>
+                        <a href={slideProject?.source} target="_blank" rel="noopener noreferrer" className="slide-btn-secondary">Github</a>
+                      </>
+                    )}
                   </>
                 )}
               </div>
@@ -134,7 +144,7 @@ const Projects = () => {
       {/* Projects Grid */}
       <div className="projects-grid">
         {filteredProjects.map((project) => (
-          <div className="project-card" key={project.id} style={{cursor: 'pointer'}}>
+          <div className={`project-card ${project.clock ? 'clocked' : ''}`} key={project.id} style={{cursor: project.clock ? 'default' : 'pointer'}}>
             <LazyImage 
               src={project.images[0]} 
               alt={project.title} 
@@ -142,32 +152,40 @@ const Projects = () => {
             />
             <div className="project-info">
               <h2>{project.title}</h2>
-              <p>{project.description}</p>
+              <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
               <div className="project-links">
-                {project.type.toLowerCase().includes("powerpoint") ? (
-                  <>
-                    <button onClick={() => openPopup(project)} className="slide-btn-main">Detail</button>
-                    <a 
-                      href={project.download || '#'} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="slide-btn-secondary"
-                      onClick={() => handleDownload(project)}
-                    >
-                      Download
-                    </a>
-                  </>
+                {project.clock ? (
+                  <div className="clock-overlay">
+                    <a href="/contact" className="contact-link">Contact for more</a>
+                  </div>
                 ) : (
                   <>
-                    <a 
-                      href={project.visit} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      onClick={() => handleVisit(project)}
-                    >
-                      Visit Page
-                    </a>
-                    <a href={project.source} target="_blank" rel="noopener noreferrer">Source</a>
+                    {project.type.toLowerCase().includes("powerpoint") ? (
+                      <>
+                        <button onClick={() => openPopup(project)} className="slide-btn-main">Detail</button>
+                        <a 
+                          href={project.download || '#'} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="slide-btn-secondary"
+                          onClick={() => handleDownload(project)}
+                        >
+                          Download
+                        </a>
+                      </>
+                    ) : (
+                      <>
+                        <a 
+                          href={project.visit} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          onClick={() => handleVisit(project)}
+                        >
+                          Visit Page
+                        </a>
+                        <a href={project.source} target="_blank" rel="noopener noreferrer">Source</a>
+                      </>
+                    )}
                   </>
                 )}
               </div>

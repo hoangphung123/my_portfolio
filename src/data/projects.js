@@ -16,25 +16,27 @@ export const projectsData = [
     visit: "#",
     source: "#",
     download: "https://docs.google.com/presentation/d/1iKEiodwzTL9QxjlcyFCXGdn1muBypbdY/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true",
-    featured: true
+    featured: true,
+    clock: false
   },
   {
     id: 2,
-    title: "Object-Oriented Software Engineering",
+    title: "Marionnaud (France)",
     type: "PowerPoint",
     images: [
-      '/assets/anh3.gif',
-      '/assets/IT1.png',
-      '/assets/IT2.png',
-      '/assets/IT3.png',
-      '/assets/IT4.png',
-      '/assets/IT5.png'
+      '/assets/xmas1.png',
+      '/assets/xmas2.png',
+      '/assets/xmas3.png',
+      '/assets/xmas4.png',
+      '/assets/xmas5.png',
+      '/assets/xmas6.png',
     ],
-    description: "This was a PowerPoint created for a group project in the OOSE course of the IT program. I chose the computer screen as the central design concept, making the visual style highly relevant to the presentation's content. The bold, rectangular layout conveys a sense of logic and formality, reinforcing the structured and professional tone of the presentation.",
+    description: "PowerPoint Design – Marionnaud (France)<br /><br />Created a professional presentation for Marionnaud – a leading cosmetics brand in France. Design aligned with brand identity, delivering clear visuals, high aesthetics, and an optimized viewing experience",
     visit: "#",
     source: "#",
-    download: "https://docs.google.com/presentation/d/1283ltxkzgEFlzvWnmHla4pSUyEfMZqKE/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true",
-    featured: true
+    download: "https://docs.google.com/presentation/d/1iKEiodwzTL9QxjlcyFCXGdn1muBypbdY/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true",
+    featured: false,
+    clock: true
   },
   {
     id: 3,
@@ -52,7 +54,8 @@ export const projectsData = [
     visit: "#",
     source: "#",
     download: "https://docs.google.com/presentation/d/11n6m4-9xdD5gj09ZNopvEwnD_yGSfkdC/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true",
-    featured: true
+    featured: true,
+    clock: false
   },
   {
     id: 4,
@@ -66,7 +69,8 @@ export const projectsData = [
     description: "Introducing the beauty of Kansai Prefecture at the Osaka exhibition, Kansai Expo 2025. • Participate in discussions, edit the design, and decide on the visual layout of the website.",
     visit: "https://future.kouiki-kansai.jp/",
     source: "#",
-    featured: true
+    featured: true,
+    clock: false
   },
   {
     id: 5,
@@ -77,7 +81,8 @@ export const projectsData = [
     visit: "#",
     source: "#",
     download: "https://docs.google.com/presentation/d/1iKEiodwzTL9QxjlcyFCXGdn1muBypbdY/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true",
-    featured: false
+    featured: false,
+    clock: false
   },
   {
     id: 6,
@@ -88,7 +93,8 @@ export const projectsData = [
     visit: "#",
     source: "#",
     download: "https://docs.google.com/presentation/d/1iKEiodwzTL9QxjlcyFCXGdn1muBypbdY/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true",
-    featured: false
+    featured: false,
+    clock: true
   },
   {
     id: 7,
@@ -105,7 +111,27 @@ export const projectsData = [
     visit: "#",
     source: "#",
     download: "https://docs.google.com/presentation/d/1iKEiodwzTL9QxjlcyFCXGdn1muBypbdY/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true",
-    featured: false
+    featured: false,
+    clock: true
+  },
+  {
+    id: 8,
+    title: "Object-Oriented Software Engineering",
+    type: "PowerPoint",
+    images: [
+      '/assets/anh3.gif',
+      '/assets/IT1.png',
+      '/assets/IT2.png',
+      '/assets/IT3.png',
+      '/assets/IT4.png',
+      '/assets/IT5.png'
+    ],
+    description: "This was a PowerPoint created for a group project in the OOSE course of the IT program. I chose the computer screen as the central design concept, making the visual style highly relevant to the presentation's content. The bold, rectangular layout conveys a sense of logic and formality, reinforcing the structured and professional tone of the presentation.",
+    visit: "#",
+    source: "#",
+    download: "https://docs.google.com/presentation/d/1283ltxkzgEFlzvWnmHla4pSUyEfMZqKE/edit?usp=drive_link&ouid=111817752097991923945&rtpof=true&sd=true",
+    featured: true,
+    clock: false
   },
 ];
 
